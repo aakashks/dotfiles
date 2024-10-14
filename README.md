@@ -1,2 +1,3 @@
 # dotfiles
-my dotfiles and configs
+
+My dotfiles, config files, and scripts

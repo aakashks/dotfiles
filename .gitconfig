@@ -1,0 +1,11 @@
+[user]
+	email = 
+	name = 
+[core]
+	excludesFile = ~/.gitignore
+
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	undo = reset --soft HEAD^
+[http]
+	postBuffer = 157286400
