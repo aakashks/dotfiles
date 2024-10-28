@@ -11,3 +11,14 @@ alias flush="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
 # Check ports
 alias ports="lsof -i -P -n | grep LISTEN"
+
+# Sync project with remote server
+REMOTE_DIR_PATH="user@server:/path/to/project/"
+
+rsync_push() {
+    rsync -avu . "$REMOTE_DIR_PATH$(basename $PWD)/" --exclude='.git' --exclude-from='.gitignore'
+}
+
+rsync_pull() {
+    rsync -avu "$REMOTE_DIR_PATH$(basename $PWD)/" . --exclude='.git' --exclude-from='.gitignore'
+}

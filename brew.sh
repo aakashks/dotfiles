@@ -91,8 +91,17 @@ brew install zsh-syntax-highlighting
 brew install obsidian
 brew install notion
 brew install jetbrains-toolbox
+brew install adobe-acrobat-reader
+brew install zotero
+brew install slack
 
 # brew install texlive
+# brew install blackhole-2ch
+# brew install docker --cask
+
+# fonts
+brew install font-ibm-plex-mono
+brew install font-jetbrains-mono-nerd-font
 
 # Remove outdated versions from the cellar.
 brew cleanup

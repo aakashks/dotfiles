@@ -1,8 +1,6 @@
 Host aws
   HostName host
   IdentityFile ~/.ssh/aws
-  UserKnownHostsFile=/dev/null
-  StrictHostKeyChecking no
   User user
 
 Host github.com
@@ -13,20 +11,19 @@ Host login
   HostName host
   User user
   IdentityFile ~/.ssh/key
-  StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
   Port 4422
+  ConnectTimeout 4
 
 Host gpu
   HostName gpuhost
   User user
   ProxyCommand ssh login -W %h:%p -i ~/.ssh/key
   IdentityFile ~/.ssh/key
-  StrictHostKeyChecking no
-  UserKnownHostsFile=/dev/null
   Port 22
 
 Host *
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
   RemoteForward 52698 localhost:52698
   RemoteForward 8080 localhost:8080
   RemoteForward 8081 localhost:8081
