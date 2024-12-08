@@ -1,8 +1,8 @@
 make_env() {
     conda create -n $1 python=3.11 -y
     conda activate $1
-    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
     pip install uv
+    uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
     uv pip install jupyter notebook rmate gpustat scikit-learn pandas seaborn
 }
 

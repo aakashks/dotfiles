@@ -9,3 +9,5 @@ rm -rf ~/miniconda3/miniconda.sh
 export PATH=~/miniconda3/bin:$PATH
 ~/miniconda3/bin/conda init bash
 source ~/.bashrc
+
+# echo "changeps1: False" >> ~/.condarc

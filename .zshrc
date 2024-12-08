@@ -55,21 +55,3 @@ export EDITOR="mate --wait"
 source ~/.zsh_aliases
 
 conda activate temp
-
-make_env() {
-    conda create -n $1 python=3.11 -y
-    conda activate $1
-    uv pip install jupyterlab notebook pandas seaborn scikit-learn
-    uv pip install torch torchvision
-}
-
-clean_cache() {
-    conda clean --all -y
-    pip cache purge
-    uv cache clean
-    brew cleanup
-}
-
-convert_notebook() {
-    jupyter nbconvert --no-prompt --to python $1
-}

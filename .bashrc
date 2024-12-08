@@ -7,7 +7,7 @@ alias jn='jupyter notebook --no-browser --port=8080 --ip='0.0.0.0''
 ## History settings
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-export HISTCONTROL=ignoredups:erasedups
+export HISTCONTROL=ignoreboth
 
 alias free-mem="free -h"                     # Show memory usage
 alias usage='du -h --max-depth=1'            # Disk usage of directories

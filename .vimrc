@@ -143,6 +143,11 @@ function! <SID>BufcloseCloseIt()
     endif
 endfunction
 
+" new settings
+set rtp+=/opt/homebrew/opt/fzf
+set scroll=1
+
+
 " Custom Status Line and Cursor Line
 " set laststatus=2                    " Always show the status line
 " set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c

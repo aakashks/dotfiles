@@ -12,6 +12,25 @@ alias flush="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 # Check ports
 alias ports="lsof -i -P -n | grep LISTEN"
 
+
+make_env() {
+    conda create -n $1 python=3.11 -y
+    conda activate $1
+    uv pip install jupyterlab notebook pandas seaborn scikit-learn
+    uv pip install torch torchvision
+}
+
+clean_cache() {
+    conda clean --all -y
+    pip cache purge
+    uv cache clean
+    brew cleanup --prune=all
+}
+
+convert_notebook() {
+    jupyter nbconvert --no-prompt --to python $1
+}
+
 # Sync project with remote server
 REMOTE_DIR_PATH="user@server:/path/to/project/"
 
@@ -22,3 +41,4 @@ rsync_push() {
 rsync_pull() {
     rsync -avu "$REMOTE_DIR_PATH$(basename $PWD)/" . --exclude='.git' --exclude-from='.gitignore'
 }
+
