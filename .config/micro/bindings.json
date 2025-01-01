@@ -1,0 +1,10 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-e": "CursorEnd",
+    "Alt-s": "CursorStart",
+    "Alt-r": "HSplit",
+    "Alt-l": "EndOfLine",
+    "AltShiftRight": "NextTab",
+    "AltShiftLeft": "PreviousTab",
+    "CtrlUnderscore": "lua:comment.comment"
+}

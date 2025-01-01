@@ -1,12 +1,38 @@
 [user]
 	email = 
 	name = 
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
 [core]
 	excludesFile = ~/.gitignore
 
 [alias]
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	undo = reset --soft HEAD^
+
+	aa = add --all
+	amend = commit --amend
+	b = branch
+	br = branch
+	ci = commit
+	co = checkout
+	dc = diff --cached
+	di = diff
+	div = divergence
+	ds = diff --stat=160,120
+	fa = fetch --all
+	ff = merge --ff-only
+	pullff = pull --ff-only
+	st = status
+ 	dh1 = diff HEAD~1
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+
+	# to commit with a specific date or change the date of the last commit
 	dated-commit = "!f() { GIT_COMMITTER_DATE=\"$1\" GIT_AUTHOR_DATE=\"$1\" git commit -m \"$2\"; }; f"
 	dated-amend = "!f() { GIT_COMMITTER_DATE=\"$1\" GIT_AUTHOR_DATE=\"$1\" git commit --amend --no-edit; }; f"
     dated-amend-l = "!f() { date=$(git log --format=\"%cI\" -n 1); GIT_COMMITTER_DATE=\"$date\" GIT_AUTHOR_DATE=\"$date\" git commit --amend --no-edit; }; f"

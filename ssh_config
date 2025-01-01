@@ -4,7 +4,6 @@ Host aws
   User user
 
 Host github.com
-  AddKeysToAgent yes
   IdentityFile ~/.ssh/github
 
 Host login
@@ -17,14 +16,36 @@ Host login
 Host gpu
   HostName gpuhost
   User user
-  ProxyCommand ssh login -W %h:%p -i ~/.ssh/key
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/key login
   IdentityFile ~/.ssh/key
   Port 22
 
 Host *
   StrictHostKeyChecking no
   UserKnownHostsFile=/dev/null
+  #  Rmate support
   RemoteForward 52698 localhost:52698
-  RemoteForward 8080 localhost:8080
-  RemoteForward 8081 localhost:8081
-  RemoteForward 8181 localhost:8181
+  
+  #  ServerAliveInterval to send a null packet to the server every 15 seconds to keep the connection alive
+  ServerAliveInterval 30
+  #  ServerAliveCountMax to send 4 null packets before giving up
+  ServerAliveCountMax 5
+
+  #  AddKeysToAgent to automatically load keys into the ssh-agent
+  AddKeysToAgent yes
+  #  ForwardAgent to forward the authentication to the remote host
+  ForwardAgent yes
+
+  #  ControlMaster to enable the sharing of multiple sessions over a single network connection
+  ControlMaster auto
+  ControlPath ~/.ssh/control-%r@%h:%p
+  ControlPersist 10m
+
+  #  UseKeychain to automatically add keys to the keychain
+  UseKeychain yes
+  # #  ForwardX11 to forward X11 connections
+  # ForwardX11 yes
+  # #  ForwardX11Trusted to trust X11 forwarding
+  # ForwardX11Trusted yes
+  TCPKeepAlive yes
+

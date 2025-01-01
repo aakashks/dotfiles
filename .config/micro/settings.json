@@ -1,0 +1,10 @@
+{
+    "autoclose": true,
+    "clipboard": "terminal",
+    "colorscheme": "solarized",
+    "ft:c": {
+        "tabsize": 4
+    },
+    "softwrap": true,
+    "tabstospaces": true
+}

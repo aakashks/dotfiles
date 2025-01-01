@@ -12,12 +12,16 @@ alias flush="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 # Check ports
 alias ports="lsof -i -P -n | grep LISTEN"
 
+# disk usage
+alias usage='gdu -h --max-depth=1'
 
 make_env() {
     conda create -n $1 python=3.11 -y
     conda activate $1
-    uv pip install jupyterlab notebook pandas seaborn scikit-learn
-    uv pip install torch torchvision
+    uv pip install jupyterlab pandas seaborn scikit-learn jupyter notebook pillow tqdm rich
+    # uv pip install schedule python-dotenv loguru fire einsum einops ruff open-webui aider-chat plotly duckdb wandb hydra-core click
+    # uv pip install scipy pyarrow polars nltk pyro openai-whisper google-generativeai mlx-lm torchmetrics websocket-client aiohttp
+    # uv pip install icecream lovely_tensors
 }
 
 clean_cache() {

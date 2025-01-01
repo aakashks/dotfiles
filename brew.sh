@@ -8,18 +8,15 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
-# Save Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
-
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
+ln -s "${HOMEBREW_PREFIX}/bin/gsha256sum" "${HOMEBREW_PREFIX}/bin/sha256sum"
 
 # Install some other useful utilities like `sponge`.
-brew install moreutils
+# brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew install findutils
+# brew install findutils
 # # Install GNU `sed`, overwriting the built-in `sed`.
 # brew install gnu-sed --with-default-names
 
@@ -31,7 +28,7 @@ brew install gnupg
 
 # Install more recent versions of some macOS tools.
 # brew install grep
-brew install openssh
+# brew install openssh
 # brew install screen
 # brew install php
 # brew install gmp
@@ -45,8 +42,8 @@ brew install openssh
 # # Install other useful binaries.
 # brew install ack
 # #brew install exiv2
-# brew install git
-# brew install git-lfs
+brew install git
+brew install git-lfs
 # brew install gs
 # brew install imagemagick --with-webp
 # brew install lua
@@ -57,7 +54,7 @@ brew install openssh
 # brew install rename
 # brew install rlwrap
 # brew install ssh-copy-id
-# brew install tree
+brew install tree
 # brew install vbindiff
 # brew install zopfli
 
@@ -95,9 +92,26 @@ brew install adobe-acrobat-reader
 brew install zotero
 brew install slack
 
+# brew install arc
+# brew install docker --cask
+# brew install zoom --cask
+# brew install lm-studio
+# brew install localsend
+# brew install android-file-transfer
+# brew install go
+
+# utilities
+brew install pandoc
+brew install rsync
+brew install croc
+brew install aria2
 # brew install texlive
 # brew install blackhole-2ch
-# brew install docker --cask
+# brew install iina
+# brew install obs
+# brew install cloudflare-warp
+# brew install ffmpeg
+# brew install youtube-dl
 
 # fonts
 brew install font-ibm-plex-mono
