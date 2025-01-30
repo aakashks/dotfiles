@@ -58,6 +58,7 @@ brew install tree
 # brew install vbindiff
 # brew install zopfli
 
+
 # My custom installs
 brew install google-chrome
 
@@ -69,6 +70,7 @@ brew install maccy
 brew install textmate
 brew install visual-studio-code
 brew install sublime-text
+brew install google-drive
 
 brew install miniconda
 

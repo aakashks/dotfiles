@@ -21,7 +21,7 @@ make_env() {
     uv pip install jupyterlab pandas seaborn scikit-learn jupyter notebook pillow tqdm rich
     # uv pip install schedule python-dotenv loguru fire einsum einops ruff open-webui aider-chat plotly duckdb wandb hydra-core click
     # uv pip install scipy pyarrow polars nltk pyro openai-whisper google-generativeai mlx-lm torchmetrics websocket-client aiohttp
-    # uv pip install icecream lovely_tensors
+    # uv pip install icecream lovely_tensors black isort gdown hydra-core
 }
 
 clean_cache() {

@@ -1,7 +1,12 @@
-# chmod +x ~/.local/bin/*
-cat bashrc >> ~/.bashrc
-source ~/.bashrc
+chmod +x ~/.local/bin/*
+chmod +x ~/scripts/*
+cat ~/scripts/bashrc >> ~/.bashrc
 
-./conda_install.sh
+# reinstall conda if needed (e.g. for AWS)
+# sudo rm -rf /opt/conda
 
-mkdir -p workspace
+./scripts/conda_install.sh
+
+mkdir -p ~/workspace
+cd workspace
+make_env temp
