@@ -11,6 +11,7 @@ HISTFILESIZE=20000
 HISTCONTROL=ignoreboth
 
 export PATH="$HOME/.local/bin:$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH"
+# export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin"
 
 # export EDITOR="micro"
 
@@ -20,5 +21,4 @@ eval "$(zoxide init bash)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 
-# export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin"
 

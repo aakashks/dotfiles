@@ -11,9 +11,11 @@ mkdir -p ~/workspace
 cd workspace
 source ~/.bashrc
 
+## conda environment
 make_env temp
-
 echo "conda activate temp" >> ~/.bashrc
 
-rm -rf ~/scripts
+# pip install -U pip
+# pip install -U uv
+
 rm -rf ~/setup.sh

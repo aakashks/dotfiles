@@ -38,3 +38,7 @@
     dated-amend-l = "!f() { date=$(git log --format=\"%cI\" -n 1); GIT_COMMITTER_DATE=\"$date\" GIT_AUTHOR_DATE=\"$date\" git commit --amend --no-edit; }; f"
 [http]
 	postBuffer = 157286400
+[pull]
+	rebase = true
+[credential]
+	helper = store

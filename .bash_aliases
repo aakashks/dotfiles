@@ -14,15 +14,21 @@ make_env() {
     conda activate $1
     pip install uv
     uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-    uv pip install jupyter notebook rmate gpustat scikit-learn pandas seaborn jupyterlab pillow tqdm wandb click rich
+    uv pip install jupyter notebook rmate gpustat scikit-learn pandas seaborn jupyterlab pillow tqdm wandb click rich papermill
     uv pip install python-dotenv loguru fire einsum einops aiohttp icecream ruff plotly torchmetrics lovely_tensors pipreqs
-    uv pip install hydra-core omegaconf 'huggingface_hub[cli]' opencv-python imageio
+    uv pip install accelerate hydra-core omegaconf 'huggingface_hub[cli]' opencv-python imageio
 }
 
 remove_env() {
     conda deactivate
     conda remove -n $1 --all -y
     conda clean --all -y
+}
+
+clean_cache() {
+    # conda clean --all -y
+    pip cache purge
+    uv cache clean
 }
 
 # tmux fix bash history
