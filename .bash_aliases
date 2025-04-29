@@ -7,7 +7,7 @@ alias usage='du -h --max-depth=1'            # Disk usage of directories
 alias df='df -h'                             # Disk space usage
 alias ports='netstat -tulnp'                 # Open ports and services
 
-alias jn='jupyter notebook --no-browser --port=8080 --ip='0.0.0.0''
+alias jn='jupyter notebook --no-browser --port 8080 --ip 0.0.0.0'
 
 make_env() {
     conda create -n $1 python=3.12 -y
