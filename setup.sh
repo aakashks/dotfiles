@@ -15,7 +15,9 @@ else
     echo "Installing Miniconda..."
     ~/scripts/conda_install.sh
 fi
-# ~/scripts/conda_install.sh
+
+# instead if only need uv then use
+wget -qO- https://astral.sh/uv/install.sh | sh
 
 # Additional setup
 # ~/scripts/linux_setup.sh
@@ -27,9 +29,6 @@ cd workspace
 tmux new-session -d -s "setup" -n "setup"
 tmux send-keys -t setup "make_env temp" C-m
 echo "conda activate temp" >> ~/.bashrc
-
-# pip install -U pip
-# pip install -U uv
 
 REPOS=(
     "https://github.com/aakashks/repo1.git"

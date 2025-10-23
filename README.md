@@ -24,6 +24,8 @@ This method uses `rsync` to copy files to a remote machine. It requires SSH acce
 *   Update placeholder values in [`.netrc`](.netrc) and [`.gitconfig`](.gitconfig) with your credentials *before* running the script.
 *   You can also add standalone binaries to `.local/bin/` before running the script to copy them to the remote machine.
 
+It is recommended to install latest binaries `tmux`, `rclone`, `croc`, etc. if connecting to a non-root system
+
 **Usage:**
 
 ```bash

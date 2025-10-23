@@ -61,43 +61,46 @@ brew install tree
 
 # My custom installs
 brew install google-chrome
-
-brew install unnaturalscrollwheels
-brew install rectangle
-
-brew install iterm2
-brew install maccy
-brew install textmate
 brew install visual-studio-code
-brew install sublime-text
-brew install google-drive
+
+brew install maccy
+brew install iterm2
+brew install unnaturalscrollwheels
+# brew install linear-mouse
+
 
 brew install miniconda
-
 brew install uv
-brew install exa
-brew install bat
+brew install wget
 brew install ripgrep
 brew install ugrep
-brew install fd
-brew install dust
-brew install starship
-brew install zoxide
 brew install fzf
+brew install zoxide
+brew install dust
+brew install exa
+brew install bat
+brew install fd
+brew install starship
+brew install pandoc
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
+brew install zotero
 brew install obsidian
+brew install textmate
+brew install slack
 brew install notion
 brew install jetbrains-toolbox
 brew install adobe-acrobat-reader
-brew install zotero
-brew install slack
+brew install google-drive
 
-# brew install arc
-# brew install docker --cask
 # brew install zoom --cask
-# brew install lm-studio
+# brew install arc
+# brew install sublime-text
+# brew install docker --cask
+# brew install rectangle
+# brew install alt-tab
+# brew install hiddenbar
 # brew install localsend
 # brew install android-file-transfer
 # brew install go

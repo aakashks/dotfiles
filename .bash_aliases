@@ -14,9 +14,9 @@ make_env() {
     conda activate $1
     pip install uv
     uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-    uv pip install jupyter notebook rmate gpustat scikit-learn pandas seaborn jupyterlab pillow tqdm wandb click rich papermill
+    uv pip install jupyter gpustat scikit-learn pandas seaborn jupyterlab pillow tqdm wandb click rich papermill
     uv pip install python-dotenv loguru fire einsum einops aiohttp icecream ruff plotly torchmetrics lovely_tensors pipreqs
-    uv pip install accelerate hydra-core omegaconf 'huggingface_hub[cli]' opencv-python imageio
+    uv pip install accelerate hydra-core omegaconf 'huggingface_hub[cli]' opencv-python imageio openai-clip jsonargparse
 }
 
 remove_env() {
